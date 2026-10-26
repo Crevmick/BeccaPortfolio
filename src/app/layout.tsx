@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
@@ -49,6 +50,7 @@ export default function RootLayout({
         className="min-h-screen flex flex-col bg-[#F8F5EE] text-[#201D1A] antialiased font-sans selection:bg-[#F7E078] selection:text-[#201D1A]"
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

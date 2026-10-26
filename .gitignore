@@ -43,3 +43,6 @@ next-env.d.ts
 .log
 .next-dev.stderr.log
 .next-dev.stdout.log
+
+# scripts
+/scripts/
