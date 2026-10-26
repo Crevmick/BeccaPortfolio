@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F8F5EE;
+  --foreground: #201D1A;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F5EE;
+  color: #201D1A;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Editorial pill cards with crisp 1.5px borders */
+.retro-card {
+  border: 1.5px solid #201D1A;
+  box-shadow: 2px 2px 0px rgba(32, 29, 26, 0.08);
+}
+
+.retro-card-shadow {
+  border: 1.5px solid #201D1A;
+  box-shadow: 3px 3px 0px #201D1A;
+}
+
+@keyframes social-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(-1.5deg); }
+  35% { transform: translate3d(3px, -9px, 0) rotate(1deg); }
+  70% { transform: translate3d(-2px, -4px, 0) rotate(-0.5deg); }
+}
+
+@keyframes social-float-reverse {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(1.5deg); }
+  40% { transform: translate3d(-3px, 8px, 0) rotate(-1deg); }
+  75% { transform: translate3d(2px, 3px, 0) rotate(0.5deg); }
+}
+
+.social-float {
+  will-change: transform;
+}
+
+.social-float--one {
+  animation: social-float 5.2s ease-in-out infinite;
+}
+
+.social-float--two {
+  animation: social-float-reverse 5.8s ease-in-out -1.4s infinite;
+}
+
+.social-float--three {
+  animation: social-float 6.1s ease-in-out -2.8s infinite;
+}
+
+.social-float--four {
+  animation: social-float-reverse 5.5s ease-in-out -3.6s infinite;
+}
+
+.social-logo-tile {
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.social-float:hover .social-logo-tile {
+  filter: saturate(1.12);
+  transform: scale(1.07) rotate(-2deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-float {
+    animation: none;
+    will-change: auto;
+  }
 }

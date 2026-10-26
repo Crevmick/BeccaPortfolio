@@ -1,0 +1,13 @@
+
+> becca-port@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.81.1:3000
+✓ Ready in 2.3s
+✓ Running next.config.ts took 160ms
+Creating turbopack project { dir: 'C:\\Users\\PC\\Desktop\\BeccaPort', testMode: true }
+- Cache Components enabled
+- Partial Prefetching enabled
+
