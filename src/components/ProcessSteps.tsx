@@ -11,7 +11,8 @@ export const ProcessSteps = () => {
     {
       num: "02",
       title: "Map",
-      color: "bg-[#F7B8A9]",
+      color: "bg-[#492A86]",
+      dark: true,
       desc: "Define content pillars, develop weekly themes, and build an organized editorial calendar with zero guesswork."
     },
     {
@@ -48,13 +49,13 @@ export const ProcessSteps = () => {
               className={`rounded-[28px] border-[1.5px] border-[#201D1A] p-7 shadow-[3px_3px_0px_#201D1A] flex flex-col justify-between min-h-[220px] ${step.color}`}
             >
               <div>
-                <div className="font-serif text-3xl font-bold text-[#201D1A] mb-3">
+                <div className={"font-serif text-3xl font-bold mb-3 " + (step.dark ? "text-white" : "text-[#201D1A]")}>
                   {step.num}
                 </div>
-                <h3 className="font-serif text-xl font-bold text-[#201D1A] mb-2">
+                <h3 className={"font-serif text-xl font-bold mb-2 " + (step.dark ? "text-white" : "text-[#201D1A]")}>
                   {step.title}
                 </h3>
-                <p className="text-xs text-stone-900 leading-relaxed font-sans">
+                <p className={"text-xs leading-relaxed font-sans " + (step.dark ? "text-white/80" : "text-stone-900")}>
                   {step.desc}
                 </p>
               </div>

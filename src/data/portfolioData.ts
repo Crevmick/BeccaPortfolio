@@ -69,6 +69,14 @@ export const servicesData: ServiceItem[] = [
     description:
       "Daily engagement, replying to comments and direct messages, and building authentic connections that keep your audience active and coming back.",
     tag: "Engagement"
+  },
+  {
+    id: "analytics-reporting",
+    number: "7",
+    title: "Analytics and Reporting",
+    description:
+      "Clear performance reporting that shows what your audience responds to and turns platform insights into practical next steps.",
+    tag: "Performance"
   }
 ];
 

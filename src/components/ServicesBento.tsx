@@ -1,16 +1,20 @@
 import React from "react";
+import Link from "next/link";
 
 export const ServicesBento = () => {
   const services = [
     {
+      slug: "smm",
       number: "01",
       title: "Social media management",
       tag: "FULL ACCOUNT MANAGEMENT",
       description:
         "Full account management, content scheduling, engagement and community management that grow your brand while you focus on scaling your business.",
-      color: "bg-[#F7B8A9]" // Soft Blush
+      color: "bg-[#492A86]",
+      dark: true
     },
     {
+      slug: "strategy",
       number: "02",
       title: "Content Strategy",
       tag: "TAILORED ROADMAP",
@@ -19,6 +23,7 @@ export const ServicesBento = () => {
       color: "bg-[#F7E078]" // Butter Yellow
     },
     {
+      slug: "creation",
       number: "03",
       title: "Content Creation",
       tag: "VISUALS & COPY",
@@ -27,6 +32,7 @@ export const ServicesBento = () => {
       color: "bg-[#D3C5E9]" // Lilac
     },
     {
+      slug: "page-optimization",
       number: "04",
       title: "IG Page Optimization",
       tag: "PROFILE & CONVERSION",
@@ -35,6 +41,7 @@ export const ServicesBento = () => {
       color: "bg-[#A7C7A8]" // Sage Green
     },
     {
+      slug: "graphic-design",
       number: "05",
       title: "Basic Graphics Design",
       tag: "BRAND CONSISTENCY",
@@ -43,14 +50,17 @@ export const ServicesBento = () => {
       color: "bg-white" // Crisp White
     },
     {
+      slug: "community",
       number: "06",
       title: "Community Management",
       tag: "AUDIENCE CARE",
       description:
         "Daily engagement, replying to comments and messages, and building real connections that keep your audience coming back.",
-      color: "bg-[#F7B8A9]" // Soft Blush
+      color: "bg-[#492A86]",
+      dark: true
     },
     {
+      slug: "analytics-reporting",
       number: "07",
       title: "Analytics and Reporting",
       tag: "PERFORMANCE & AUDIT",
@@ -81,15 +91,17 @@ export const ServicesBento = () => {
         {/* 7 Services Bento Grid - Clean, purely typographic */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((item, idx) => (
-            <div
+            <Link
               key={idx}
+              href={`/services/${item.slug}`}
+              aria-label={`Learn more about ${item.title}`}
               className={`rounded-[24px] border border-[#201D1A] p-7 shadow-[2px_2px_0px_#201D1A] flex flex-col justify-between hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_#201D1A] transition-all duration-300 min-h-[260px] group ${
                 item.color
               } ${idx === 0 ? "lg:col-span-2" : ""}`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-serif text-3xl font-bold text-[#201D1A]">
+                  <span className={"font-serif text-3xl font-bold " + (item.dark ? "text-white" : "text-[#201D1A]")}>
                     {item.number}
                   </span>
 
@@ -98,20 +110,20 @@ export const ServicesBento = () => {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#201D1A] mb-2.5 leading-snug">
+                <h3 className={"font-serif text-xl sm:text-2xl font-bold mb-2.5 leading-snug " + (item.dark ? "text-white" : "text-[#201D1A]")}>
                   {item.title}
                 </h3>
 
-                <p className="text-xs sm:text-[13px] text-stone-800 leading-relaxed font-sans">
+                <p className={"text-xs sm:text-[13px] leading-relaxed font-sans " + (item.dark ? "text-white/80" : "text-stone-800")}>
                   {item.description}
                 </p>
               </div>
 
-              <div className="pt-4 mt-5 border-t border-[#201D1A]/15 flex items-center justify-between text-[10px] font-mono font-bold tracking-wider uppercase text-stone-700">
+              <div className={"pt-4 mt-5 flex items-center justify-between border-t text-[10px] font-mono font-bold tracking-wider uppercase " + (item.dark ? "border-white/20 text-white/70" : "border-[#201D1A]/15 text-stone-700")}>
                 <span>Rebecca Adewumi SMM</span>
-                <span className="text-xs opacity-60">✦</span>
+                <span className="flex items-center gap-1 text-[9px]">View details <span className="text-sm">↗</span></span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

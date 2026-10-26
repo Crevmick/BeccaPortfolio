@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export const FeaturedCaseStudy = () => {
   return (
@@ -15,13 +17,13 @@ export const FeaturedCaseStudy = () => {
             </h3>
           </div>
 
-          <div className="pt-8 border-t border-[#F8F5EE]/20 mt-8 space-y-2">
-            <p className="font-serif italic text-base text-[#F8F5EE]/95">
-              &ldquo;She transformed our social media presence and turned visibility into student enrolments.&rdquo;
+          <div className="pt-8 border-t border-[#F8F5EE]/20 mt-8 space-y-3">
+            <p className="text-sm leading-relaxed text-[#F8F5EE]/80">
+              From limited platform presence to a structured content system built around parent trust, student stories, and admissions.
             </p>
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#F7E078]">
-              Havilah Schools Leadership
-            </div>
+            <Link href="/experience/havilah-schools" className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-[#F7E078]">
+              Read the full case study <ArrowUpRight size={14} />
+            </Link>
           </div>
         </div>
 
@@ -87,13 +89,13 @@ export const FeaturedCaseStudy = () => {
             </div>
           </div>
 
-          {/* Flatlay Workspace Photo */}
-          <div className="rounded-2xl overflow-hidden aspect-[21/9] border border-[#201D1A]/10 bg-stone-100">
-            <img
-              src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=1000&auto=format&fit=crop&q=80"
-              alt="Editorial Planning & Content Roadmap"
-              className="w-full h-full object-cover"
-            />
+          <div className="flex flex-col gap-4 rounded-2xl border border-[#201D1A]/10 bg-[#F8F5EE] p-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-lg text-xs leading-relaxed text-stone-600">
+              See the strategy, platform growth, content execution, and value delivered in the complete project breakdown.
+            </p>
+            <Link href="/experience/havilah-schools" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-[#201D1A] bg-[#201D1A] px-5 py-3 text-[10px] font-bold uppercase tracking-wider text-white transition-colors hover:bg-[#492A86]">
+              Explore project <ArrowUpRight size={14} />
+            </Link>
           </div>
         </div>
       </div>

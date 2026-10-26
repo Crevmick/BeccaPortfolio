@@ -78,7 +78,7 @@ export const ContactFooter = () => {
 
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-blue-950 text-center text-[11px] text-slate-400">
-          © {new Date().getFullYear()} {profileData.name}. All rights reserved.
+          © {profileData.name}. All rights reserved.
         </div>
       </div>
     </footer>

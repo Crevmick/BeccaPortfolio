@@ -2,12 +2,12 @@ import React from "react";
 
 export const ContentCalendarSection = () => {
   const days = [
-    { day: "MON", title: "Educational Anchor", color: "bg-[#F7B8A9]" },
-    { day: "TUE", title: "Behind-The-Scenes", color: "bg-[#F7E078]" },
-    { day: "WED", title: "Product / Student Spotlight", color: "bg-[#D3C5E9]" },
-    { day: "THU", title: "Parent Tips & FAQ", color: "bg-[#A7C7A8]" },
-    { day: "FRI", title: "Community Polls & Q&A", color: "bg-white" },
-    { day: "SAT", title: "Weekend Highlight", color: "bg-[#F7B8A9]" }
+    { day: "MON", title: "Educational Anchor", color: "bg-[#492A86] text-white" },
+    { day: "TUE", title: "Behind-The-Scenes", color: "bg-[#F7E078] text-[#201D1A]" },
+    { day: "WED", title: "Product / Student Spotlight", color: "bg-[#D3C5E9] text-[#201D1A]" },
+    { day: "THU", title: "Parent Tips & FAQ", color: "bg-[#A7C7A8] text-[#201D1A]" },
+    { day: "FRI", title: "Community Polls & Q&A", color: "bg-white text-[#201D1A]" },
+    { day: "SAT", title: "Weekend Highlight", color: "bg-[#492A86] text-white" }
   ];
 
   return (
@@ -32,7 +32,7 @@ export const ContentCalendarSection = () => {
             {days.map((item, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl p-4 text-[#201D1A] border border-[#201D1A] shadow-xs flex flex-col justify-between min-h-[110px] ${item.color}`}
+                className={`rounded-2xl p-4 border border-[#201D1A] shadow-xs flex flex-col justify-between min-h-[110px] ${item.color}`}
               >
                 <div className="text-[11px] font-mono font-bold tracking-wider opacity-75">
                   {item.day}

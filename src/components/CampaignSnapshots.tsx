@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const CampaignSnapshots = () => {
   const campaigns = [
@@ -11,7 +12,7 @@ export const CampaignSnapshots = () => {
       client: "Havilah Schools",
       description:
         "Grew page from 0 to 100+ followers on Instagram with student enrolments recorded during the growth period, plus TikTok growth to 900+ followers.",
-      imageUrl: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=700&auto=format&fit=crop&q=80"
+      imageUrl: "/work/havilah-summer-lesson.png"
     },
     {
       id: "forthright",
@@ -21,7 +22,7 @@ export const CampaignSnapshots = () => {
       client: "Forthright Naija Kitchen & Pastries (Germany)",
       description:
         "Developed culinary storytelling around African meals, pastries, catering events, and behind-the-scenes prep to generate enquiries.",
-      imageUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&auto=format&fit=crop&q=80"
+      imageUrl: "/work/forthright-monday.png"
     },
     {
       id: "ecstatic",
@@ -41,7 +42,7 @@ export const CampaignSnapshots = () => {
       client: "RelFond Nigeria",
       description:
         "Designed graphics for initiatives and announcements, streamlined official communications, and optimized the social media presence.",
-      imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&auto=format&fit=crop&q=80"
+      imageUrl: "/work/relfond-new-month.png"
     }
   ];
 
@@ -72,11 +73,13 @@ export const CampaignSnapshots = () => {
             >
               <div className="p-4 space-y-4">
                 {/* Rounded Photo at the top */}
-                <div className="rounded-[20px] overflow-hidden aspect-[4/3] bg-stone-100 border border-[#201D1A]/10">
-                  <img
+                <div className="relative rounded-[20px] overflow-hidden aspect-[4/3] bg-stone-100 border border-[#201D1A]/10">
+                  <Image
                     src={camp.imageUrl}
                     alt={camp.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(min-width: 1024px) 260px, (min-width: 640px) 45vw, calc(100vw - 64px)"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 

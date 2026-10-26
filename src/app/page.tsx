@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { TickerBar } from "@/components/TickerBar";
 import { ServicesBento } from "@/components/ServicesBento";
 import { CampaignSnapshots } from "@/components/CampaignSnapshots";
+import { MyContentSection } from "@/components/MyContentSection";
 import { FeaturedCaseStudy } from "@/components/FeaturedCaseStudy";
 import { ContentCalendarSection } from "@/components/ContentCalendarSection";
 import { PlatformEnergySection } from "@/components/PlatformEnergySection";
@@ -21,6 +22,7 @@ export default function Home() {
         <TickerBar />
         <ServicesBento />
         <CampaignSnapshots />
+        <MyContentSection />
         <FeaturedCaseStudy />
         <ContentCalendarSection />
         <PlatformEnergySection />

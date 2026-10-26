@@ -13,14 +13,14 @@ export const Hero = () => {
   const whatsappUrl = `https://wa.me/234${profileData.phone.replace(/^0/, "")}`;
 
   return (
-    <section className="overflow-hidden bg-[#F8F5EE] px-6 pb-20 pt-12">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-12">
-        <div className="space-y-6 lg:col-span-7">
+    <section className="overflow-hidden bg-[#F8F5EE] px-4 pb-14 pt-8 sm:px-6 sm:pb-20 sm:pt-12">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 sm:gap-14 lg:grid-cols-12 lg:gap-12">
+        <div className="space-y-5 sm:space-y-6 lg:col-span-7">
           <div className="inline-block rounded-full border border-[#201D1A] bg-[#F7E078] px-4 py-1.5 font-mono text-[10px] font-bold uppercase tracking-widest text-[#201D1A]">
             For schools, e-commerce &amp; modern brands
           </div>
 
-          <h1 className="font-serif text-5xl font-bold leading-[1.08] tracking-tight text-[#201D1A] sm:text-6xl lg:text-7xl">
+          <h1 className="font-serif text-[2.65rem] font-bold leading-[1.06] tracking-tight text-[#201D1A] min-[400px]:text-5xl sm:text-6xl lg:text-7xl">
             Content that feels clear, useful, and worth saving.
           </h1>
 
@@ -28,19 +28,19 @@ export const Hero = () => {
             Helping small brands, schools, and business owners build intentional social media presence through tailored content strategy, short-form video production, and high-converting page management.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="grid grid-cols-1 gap-3 pt-2 min-[430px]:flex min-[430px]:flex-wrap min-[430px]:items-center min-[430px]:gap-4">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-[#201D1A] bg-[#492A86] px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-[#F8F5EE] shadow-[2px_2px_0px_#201D1A] transition-all hover:translate-x-px hover:translate-y-px hover:bg-[#381F69] hover:shadow-[1px_1px_0px_#201D1A]"
+              className="rounded-full border border-[#201D1A] bg-[#492A86] px-8 py-3.5 text-center text-xs font-bold uppercase tracking-wider text-[#F8F5EE] shadow-[2px_2px_0px_#201D1A] transition-all hover:translate-x-px hover:translate-y-px hover:bg-[#381F69] hover:shadow-[1px_1px_0px_#201D1A]"
             >
               Work With Me
             </a>
 
             <a
               href="#experience"
-              className="rounded-full border border-[#201D1A] bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-wider text-[#201D1A] shadow-[2px_2px_0px_#201D1A] transition-all hover:bg-stone-50"
+              className="rounded-full border border-[#201D1A] bg-white px-8 py-3.5 text-center text-xs font-bold uppercase tracking-wider text-[#201D1A] shadow-[2px_2px_0px_#201D1A] transition-all hover:bg-stone-50"
             >
               See Case Studies
             </a>
@@ -48,7 +48,7 @@ export const Hero = () => {
         </div>
 
         <div className="relative flex justify-center lg:col-span-5">
-          <div className="relative w-full max-w-[430px] px-3 pb-5 sm:px-5">
+          <div className="relative w-full max-w-[430px] px-4 pb-7 sm:px-5 sm:pb-5">
             <div className="social-float social-float--one absolute -left-3 top-14 z-30 flex items-center gap-2.5 rounded-2xl border border-white/80 bg-white/90 p-2 pr-3.5 text-[#201D1A] shadow-[0_12px_32px_rgba(32,29,26,0.18),0_2px_0_#201D1A] backdrop-blur-md sm:-left-8">
               <span className="social-logo-tile flex size-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-xl text-white">
                 <FontAwesomeIcon icon={faInstagram} />

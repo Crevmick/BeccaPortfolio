@@ -3,8 +3,8 @@
 :root {
   --background: #F8F5EE;
   --foreground: #201D1A;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: "Segoe UI", Arial, sans-serif;
 }
 
 body {
@@ -12,6 +12,11 @@ body {
   color: #201D1A;
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 h1, h2, h3, .font-serif {
