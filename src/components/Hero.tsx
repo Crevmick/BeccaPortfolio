@@ -65,14 +65,17 @@ export const Hero = () => {
               <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-white bg-[#6DBE75]" aria-hidden="true" />
             </a>
 
-            <div
-              aria-label="Facebook"
-              className="social-float social-float--three absolute right-1 top-20 z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_10px_24px_rgba(32,29,26,0.16),0_2px_0_#201D1A] backdrop-blur-md sm:-right-7 sm:top-24"
+            <a
+              href="https://www.facebook.com/share/19h51XJSBr/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Follow Rebecca on Facebook"
+              className="social-float social-float--three absolute right-1 top-20 z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_10px_24px_rgba(32,29,26,0.16),0_2px_0_#201D1A] backdrop-blur-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#492A86] sm:-right-7 sm:top-24"
             >
               <span className="social-logo-tile flex size-9 items-center justify-center rounded-xl bg-[#1877F2] text-lg text-white">
                 <FontAwesomeIcon icon={faFacebookF} />
               </span>
-            </div>
+            </a>
 
             <a
               href="https://www.linkedin.com/in/rebecca-adewumi-74b481285/"
