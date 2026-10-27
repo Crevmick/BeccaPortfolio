@@ -5,7 +5,6 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedinIn,
-  faTiktok,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
@@ -65,12 +64,6 @@ export const Hero = () => {
               </span>
               <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-white bg-[#6DBE75]" aria-hidden="true" />
             </a>
-
-            <div className="social-float social-float--two absolute -right-2 top-[39%] z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_12px_28px_rgba(32,29,26,0.18),0_2px_0_#201D1A] backdrop-blur-md sm:-right-6">
-              <span className="social-logo-tile flex size-11 items-center justify-center rounded-xl bg-[#111] text-xl text-white shadow-[2px_2px_0_#25F4EE]">
-                <FontAwesomeIcon icon={faTiktok} />
-              </span>
-            </div>
 
             <div
               aria-label="Facebook"

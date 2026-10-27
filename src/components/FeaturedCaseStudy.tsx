@@ -60,30 +60,30 @@ export const FeaturedCaseStudy = () => {
           </div>
 
           {/* 3 Metric Pills */}
-          <div className="grid grid-cols-3 gap-3 pt-2">
-            <div className="rounded-2xl bg-[#F8F5EE] border-[1.5px] border-[#201D1A] p-4 text-center">
-              <div className="font-serif text-2xl sm:text-3xl font-black text-[#201D1A]">
+          <div className="grid grid-cols-3 items-stretch gap-2 pt-2 sm:gap-3">
+            <div className="flex min-h-24 flex-col items-center justify-center rounded-2xl border-[1.5px] border-[#201D1A] bg-[#F8F5EE] px-2 py-4 text-center sm:min-h-0 sm:p-4">
+              <div className="font-serif text-2xl font-black leading-none text-[#201D1A] sm:text-3xl">
                 +300%
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-stone-600 mt-1">
+              <div className="mt-2 text-[9px] font-bold uppercase leading-tight tracking-wide text-stone-600 sm:text-[10px] sm:tracking-wider">
                 TikTok Growth
               </div>
             </div>
 
-            <div className="rounded-2xl bg-[#F8F5EE] border-[1.5px] border-[#201D1A] p-4 text-center">
-              <div className="font-serif text-2xl sm:text-3xl font-black text-[#201D1A]">
+            <div className="flex min-h-24 flex-col items-center justify-center rounded-2xl border-[1.5px] border-[#201D1A] bg-[#F8F5EE] px-2 py-4 text-center sm:min-h-0 sm:p-4">
+              <div className="font-serif text-2xl font-black leading-none text-[#201D1A] sm:text-3xl">
                 84.3%
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-stone-600 mt-1">
+              <div className="mt-2 text-[9px] font-bold uppercase leading-tight tracking-wide text-stone-600 sm:text-[10px] sm:tracking-wider">
                 Non-Follower Reach
               </div>
             </div>
 
-            <div className="rounded-2xl bg-[#F8F5EE] border-[1.5px] border-[#201D1A] p-4 text-center">
-              <div className="font-serif text-2xl sm:text-3xl font-black text-[#492A86]">
+            <div className="flex min-h-24 flex-col items-center justify-center rounded-2xl border-[1.5px] border-[#201D1A] bg-[#F8F5EE] px-2 py-4 text-center sm:min-h-0 sm:p-4">
+              <div className="font-serif text-2xl font-black leading-none text-[#492A86] sm:text-3xl">
                 100+
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-stone-600 mt-1">
+              <div className="mt-2 text-[9px] font-bold uppercase leading-tight tracking-wide text-stone-600 sm:text-[10px] sm:tracking-wider">
                 Enrolments Began
               </div>
             </div>
