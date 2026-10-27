@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -25,31 +24,6 @@ const posts = [
 ];
 
 export const MyContentSection = () => {
-  const [activePost, setActivePost] = useState(posts[0].id);
-  const cardsRef = useRef<(HTMLElement | null)[]>([]);
-  const visibilityRef = useRef(new Map<string, number>());
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const id = (entry.target as HTMLElement).dataset.reelId;
-          if (id) visibilityRef.current.set(id, entry.intersectionRatio);
-        });
-
-        const mostVisible = [...visibilityRef.current.entries()]
-          .filter(([, ratio]) => ratio >= 0.55)
-          .sort((a, b) => b[1] - a[1])[0];
-
-        if (mostVisible) setActivePost(mostVisible[0]);
-      },
-      { threshold: [0, 0.25, 0.55, 0.75, 1] },
-    );
-
-    cardsRef.current.forEach((card) => card && observer.observe(card));
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section id="content" className="border-y border-[#201D1A]/10 bg-white px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
@@ -82,8 +56,6 @@ export const MyContentSection = () => {
           {posts.map((post, index) => (
             <article
               key={post.id}
-              ref={(element) => { cardsRef.current[index] = element; }}
-              data-reel-id={post.id}
               className="overflow-hidden rounded-[30px] border-[1.5px] border-[#201D1A] bg-[#F8F5EE] p-3 shadow-[4px_4px_0_#201D1A] sm:p-4"
             >
               <div className="flex items-center justify-between px-2 pb-3 pt-1">
@@ -98,29 +70,13 @@ export const MyContentSection = () => {
                 </span>
               </div>
               <div className="overflow-hidden rounded-[22px] border border-[#201D1A]/10 bg-white">
-                {activePost === post.id ? (
-                  <iframe
-                    key={post.id}
-                    src={"https://www.instagram.com/reel/" + post.id + "/embed/captioned/"}
-                    title={post.label}
-                    loading="lazy"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    className="h-[660px] w-full border-0"
-                  />
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setActivePost(post.id)}
-                    className="flex h-[660px] w-full flex-col items-center justify-center gap-5 bg-[#F8F5EE] px-8 text-center transition-colors hover:bg-[#D3C5E9]/35"
-                    aria-label={`Load ${post.label} and stop the current reel`}
-                  >
-                    <span className="flex size-16 items-center justify-center rounded-full border border-[#201D1A] bg-[#492A86] text-2xl text-white shadow-[3px_3px_0_#201D1A]">
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </span>
-                    <span className="font-serif text-2xl font-bold">Play this reel</span>
-                    <span className="max-w-xs text-sm leading-relaxed text-stone-600">The current reel will stop before this one loads.</span>
-                  </button>
-                )}
+                <iframe
+                  src={"https://www.instagram.com/reel/" + post.id + "/embed/captioned/"}
+                  title={post.label}
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  className="h-[660px] w-full border-0"
+                />
               </div>
             </article>
           ))}
