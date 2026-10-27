@@ -49,7 +49,13 @@ export const Hero = () => {
 
         <div className="relative flex justify-center lg:col-span-5">
           <div className="relative w-full max-w-[430px] px-4 pb-7 sm:px-5 sm:pb-5">
-            <div className="social-float social-float--one absolute -left-3 top-14 z-30 flex items-center gap-2.5 rounded-2xl border border-white/80 bg-white/90 p-2 pr-3.5 text-[#201D1A] shadow-[0_12px_32px_rgba(32,29,26,0.18),0_2px_0_#201D1A] backdrop-blur-md sm:-left-8">
+            <a
+              href="https://www.instagram.com/ariksbeccah/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Follow Rebecca on Instagram"
+              className="social-float social-float--one absolute -left-3 top-14 z-30 flex items-center gap-2.5 rounded-2xl border border-white/80 bg-white/90 p-2 pr-3.5 text-[#201D1A] shadow-[0_12px_32px_rgba(32,29,26,0.18),0_2px_0_#201D1A] backdrop-blur-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#492A86] sm:-left-8"
+            >
               <span className="social-logo-tile flex size-10 items-center justify-center rounded-xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-xl text-white">
                 <FontAwesomeIcon icon={faInstagram} />
               </span>
@@ -58,7 +64,7 @@ export const Hero = () => {
                 <span className="block text-xs font-extrabold tracking-tight">Instagram</span>
               </span>
               <span className="absolute -right-1 -top-1 size-3 rounded-full border-2 border-white bg-[#6DBE75]" aria-hidden="true" />
-            </div>
+            </a>
 
             <div className="social-float social-float--two absolute -right-2 top-[39%] z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_12px_28px_rgba(32,29,26,0.18),0_2px_0_#201D1A] backdrop-blur-md sm:-right-6">
               <span className="social-logo-tile flex size-11 items-center justify-center rounded-xl bg-[#111] text-xl text-white shadow-[2px_2px_0_#25F4EE]">
@@ -75,14 +81,17 @@ export const Hero = () => {
               </span>
             </div>
 
-            <div
-              aria-label="LinkedIn"
-              className="social-float social-float--four absolute -right-1 bottom-28 z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_10px_24px_rgba(32,29,26,0.16),0_2px_0_#201D1A] backdrop-blur-md sm:-right-8 sm:bottom-32"
+            <a
+              href="https://www.linkedin.com/in/rebecca-adewumi-74b481285/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Connect with Rebecca on LinkedIn"
+              className="social-float social-float--four absolute -right-1 bottom-28 z-30 rounded-2xl border border-white/80 bg-white/90 p-1.5 shadow-[0_10px_24px_rgba(32,29,26,0.16),0_2px_0_#201D1A] backdrop-blur-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#492A86] sm:-right-8 sm:bottom-32"
             >
               <span className="social-logo-tile flex size-10 items-center justify-center rounded-xl bg-[#0A66C2] text-lg text-white">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </span>
-            </div>
+            </a>
 
             <a
               href={whatsappUrl}
